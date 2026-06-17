@@ -1,9 +1,9 @@
-import dotenv from 'dotenv';
+import './config/env.js';
+import dns from 'dns';
 import app from './src/app.js';
 import connectDB from './config/db.js';
 
-// Configure environment variables
-dotenv.config();
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 // Connect to MongoDB Database
 connectDB();
